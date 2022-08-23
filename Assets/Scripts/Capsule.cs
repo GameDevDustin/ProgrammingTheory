@@ -12,7 +12,7 @@ public class Capsule : Shape {
         _materialName = _material.name;
     }
 
-    protected override void DisplayText() {
+    public override void DisplayText() {
         UIManager.Instance.DisplayText("This is the " + _name + " shape with the color " + _colorName + ". The material name is " + _materialName);
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Shape : MonoBehaviour {
-    protected string _name { get; set; }
+    protected string _name { get; set;  }
     protected string _colorName { get; set; }
     protected Material _material { get; set; }
     protected string _materialName { get; set; }
@@ -15,7 +15,7 @@ public abstract class Shape : MonoBehaviour {
 
     protected abstract void OnStart();
     
-    protected virtual void DisplayText() {
+    public virtual void DisplayText() {
         UIManager.Instance.DisplayText("This is the shape class.");
     }
 }

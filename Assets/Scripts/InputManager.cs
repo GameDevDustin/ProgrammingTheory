@@ -9,28 +9,33 @@ public class InputManager : MonoBehaviour {
 
     private void Update() {
         if (Mouse.current.leftButton.wasPressedThisFrame) {
-            RaycastHit rayHit;
-            Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+            RaycastCheckTarget();
+        }
+    }
 
-            if (Physics.Raycast(ray, out rayHit)) {
-                string hitTag = rayHit.transform.tag;
-                Transform hitTransform = rayHit.transform;
+    private void RaycastCheckTarget() {
+        RaycastHit rayHit;
+        Ray ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
-                switch (hitTag) {
-                    case "Capsule":
-                        hitTransform.GetComponent<Capsule>().DisplayText();
-                        break;
-                    case "Cube":
-                        hitTransform.GetComponent<Cube>().DisplayText();
-                        break;
-                    case "Cylinder":
-                        hitTransform.GetComponent<Cylinder>().DisplayText();
-                        break;
-                    case "Sphere":
-                        hitTransform.GetComponent<Sphere>().DisplayText();
-                        break;
-                }
+        if (Physics.Raycast(ray, out rayHit)) {
+            string hitTag = rayHit.transform.tag;
+            Transform hitTransform = rayHit.transform;
+
+            switch (hitTag) {
+                case "Capsule":
+                    hitTransform.GetComponent<Capsule>().DisplayText();
+                    break;
+                case "Cube":
+                    hitTransform.GetComponent<Cube>().DisplayText();
+                    break;
+                case "Cylinder":
+                    hitTransform.GetComponent<Cylinder>().DisplayText();
+                    break;
+                case "Sphere":
+                    hitTransform.GetComponent<Sphere>().DisplayText();
+                    break;
             }
         }
     }
 }
+

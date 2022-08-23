@@ -19,3 +19,4 @@ public abstract class Shape : MonoBehaviour {
         UIManager.Instance.DisplayText("This is the shape class.");
     }
 }
+

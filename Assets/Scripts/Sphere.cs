@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Sphere : Shape {
-
-
+    
     protected override void OnStart() {
         _name = "Sphere";
         _colorName = "Green";

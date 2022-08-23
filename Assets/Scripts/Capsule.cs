@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Capsule : Shape {
 
-
     protected override void OnStart() {
         _name = "Capsule";
         _colorName = "Red";

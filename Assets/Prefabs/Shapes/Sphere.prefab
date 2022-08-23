@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5177181725025004035}
+  - component: {fileID: -951256649448727852}
   - component: {fileID: 5177181725025004032}
   - component: {fileID: 5177181725025004033}
   - component: {fileID: 5177181725025004038}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: ShapeSubclass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,6 +35,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-951256649448727852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5177181725025004039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb254a49cb83ad746bf0a33f48ba3ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &5177181725025004032
 MeshFilter:
   m_ObjectHideFlags: 0

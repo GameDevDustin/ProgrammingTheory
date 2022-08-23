@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shape : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public abstract class Shape : MonoBehaviour {
+    protected string _name { get; set; }
+    protected string _colorName { get; set; }
+    protected Material _material { get; set; }
+    protected string _materialName { get; set; }
+
+
+    protected void Start() {
+        OnStart();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    protected abstract void OnStart();
+    
+    protected virtual void DisplayText() {
+        UIManager.Instance.DisplayText("This is the shape class.");
     }
 }
